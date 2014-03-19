@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+<script type="text/javascript">
+
+function printGugudan() {
+	var dan = document.getElementById("input_dan").value;
+	
+	var regexp = /[1-9]/g;
+	var text = "";	
+	
+	if (regexp.test(dan)&&dan.length == 1){
+		for (var i = 1 ; i < 10 ;i++) {
+	
+			text = text + dan + " * " + i + " = " + (i*dan);
+			text = text + "\n"	
+		}
+		document.getElementById("print_area").value = text;
+		
+	} else {
+		alert("1-9사이의 숫자만 입력하세요");
+		document.getElementById("print_area").value = "";
+	}
+}
+
+function createOption() {
+	
+	var optionHtml = "";
+	var firstOption = "<option>선택</option>"
+	 
+	for (var i = 1 ; i < 10 ;i++) {
+		optionHtml += "<option value="+ i +">" + i + "</option>"
+	}
+	document.getElementById("input_dan").innerHTML = firstOption+optionHtml;
+}
+</script>
+</head>
+<body onload="createOption()">
+<h1>구구단</h1><br>
+	<select id="input_dan" onchange="printGugudan()"></select> 단<br>
+<textarea id="print_area" rows="10" cols="10"></textarea>
+</body>
+</html>

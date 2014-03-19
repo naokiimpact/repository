@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location</title>
+<script type="text/javascript">
+
+window.onload = function init() {
+	
+	var btnGo = document.getElementById("go");
+	btnGo.addEventListener("click", goNaver);
+}
+
+function goNaver() {
+	alert("현재 URL : " + location.href + "입니다.");
+	location.href = "http://naver.com";
+}
+
+</script>
+
+</head>
+<body>
+<button id="go">네이버</button>
+</body>
+</html>

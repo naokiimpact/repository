@@ -1,0 +1,168 @@
+@CHARSET "UTF-8";
+body {
+	width: 100%;
+	padding: 0;
+}
+div.top { 
+	height: 70px;
+	width: 600px;
+	border-bottom: 0px;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #F5F0EA;
+}
+div.left {
+	float: left;
+	width: 300px;
+	height: 320px;
+	border-right: 0px;
+	border-top: 0px;
+	border-radius: 0px 0px 0px 10px;
+	background-color: #F5F0EA;
+}
+div.right {
+	float: left;
+	width: 300px;
+	height: 320px;
+	border-left: 0px;
+	border-top: 0px;
+	background-color: #F5F0EA;
+	border-radius: 0px 0px 10px 0px;
+}
+div.first {
+	position: absolute;
+	top: 110px;
+	left: 45px;
+}
+div.second {
+	position: absolute;
+	top: 190px;
+	left: 45px;
+}
+div.third {
+	position: absolute;
+	top: 270px;
+	left: 45px;
+}
+div#inning {
+	position: absolute;
+	top: 35px;
+	left: 20px;
+	width: 300px;
+	font-size: 25px;
+	font-family: 굴림;
+	font-weight: bold;
+	color: #ABADAB;
+}
+div#input {
+	position: absolute;
+	top: 35px;
+	left: 310px;
+	width: 300px;
+}
+input#inning_num {
+	border: 0px;
+	background-color: transparent;
+	color: black;
+	width: 30px;
+	margin-left: 20px;
+	font-size: 25px;
+	font-family: 굴림;
+	font-weight: bold;
+	text-align: center;
+}
+input.input {
+	font-size: 12px;
+	width: 40px;
+	margin-left: 10px;
+	float: right;
+	font-size: 25px;
+	font-family: 굴림;
+	text-align: center;
+	background-color: transparent;
+	color: silver;
+	border: 0;
+	border-bottom: 1px solid #A89D90;
+}
+input#clock{
+	background-color: transparent;
+	margin-top: 7px;
+	width: 60px;
+	float: right;
+	padding: 2px;
+   	border-radius: 5px;
+   	border: 1px solid #A89D90;
+	}
+button#clear {
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-right: 30px;
+	padding: 0;
+	width: 50px;
+	height: 25px;
+	float: right;
+   	border-radius: 5px;
+   	border: 1px solid #A89D90;
+}
+button.input_btn {
+	margin-left: 10px;
+	width: 60px;
+	height: 60px;
+	float: left;
+	font-size: 25px;
+	font-family: 굴림;
+   	border-radius: 20px;
+   	border: 1px solid #A89D90;
+   	background-color: #ffffff;
+}
+button#stop {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0;
+	width: 35px;
+	height: 25px;
+	float: right;
+   	border-radius: 5px;
+   	border: 1px solid #A89D90;
+}
+button#restart {
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 5px;
+	padding: 0;
+	width: 45px;
+	height: 25px;
+	float: right;
+   	border-radius: 5px;
+   	border: 1px solid #A89D90;
+}
+button#start {
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0;
+	width: 40px;
+	height: 25px;
+	float: right;
+   	border-radius: 5px;
+   	border: 1px solid #A89D90;
+}
+button#cheat {
+	margin-top: 5px;
+	margin-left: 5px;
+	padding: 0;
+	width: 50px;
+	height: 25px;
+	float: right;
+	opacity: 0.05;
+   	border-radius: 5px;
+   	border: 1px solid #A89D90;
+}
+textarea#result {
+	background-color: transparent;
+	margin-top: 25px;
+	margin-left: 35px;
+	border-radius: 5px;
+	resize: none;
+	border: 1px solid #A89D90;
+}

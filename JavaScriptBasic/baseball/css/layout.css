@@ -1,0 +1,122 @@
+@CHARSET "utf-8";
+div.center {
+	width : 30%;
+	height : 50%;
+	padding-top: 160px;
+	margin-left: 35%;
+	margin-right: 40%;
+	background-color: #F5F0EA;
+	border-radius: 40px;
+}
+div.centerL {
+	width : 60%;
+	height : 90%;
+	margin-left: 20%;
+	margin-right: 18%;
+	background-color: #F5F0EA;
+	border-radius: 40px;
+}
+div.login {
+	padding-top: 3%;
+	padding-left: 4%;
+	padding-bottom: 2%;
+	color: #A89D90;
+	font-weight: bold;
+}
+div.complete {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+	color: #A89D90;
+	border: 2px solid #A89D90;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	border-radius: 40px;
+}
+table {
+	width: 60%;
+	margin-left: 19%;
+	margin-right: 20%;
+	border-spacing: 0;
+	text-align: center;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 10px;
+	border: 2px solid #A89D90;
+	background-color: #FFFFFF;
+	border-collapse: separate;
+	font-family: 돋움;
+	font-size: 12px;
+}
+td {
+	height: 30px;
+	border-spacing: 0;
+	padding: 5px;
+}
+th {
+	height: 30px;
+	border-spacing: 0;
+	text-align: center !important;
+}
+td.loginLeft {
+	width: 30%;
+}
+td.loginright {
+	width: 30px;
+}
+input {
+	border: 0px;
+	background-color: #FFFFFF;
+	border: 1px solid #A89D90;
+	border-radius: 5px;
+	font-family: 돋움;
+	font-size: 12px;
+}
+input[type="text"] {
+	width: 90%; 
+	padding-left: 10px;
+}
+input[type="password"] {
+	width: 90%; 
+	padding-left: 10px;
+}
+div.title {
+	padding-top: 3%;
+	margin-left: 21%;
+}
+div.button {
+	float: right;
+	margin-top: 3%;
+	margin-right: 22%;
+}
+div.error {
+	color: red;
+	float: left;
+	margin-top: 3%;
+	margin-left: 22%;
+}
+.check {
+	width: 30px;	
+}
+.no {
+	width: 80px;
+}
+.name {
+	width: 250px;
+	text-align: left;
+}
+.price {
+	width: 120px;
+	text-align: right;
+}
+.infoName {
+	width: 140px;
+}
+.infoValue {
+	width: 313px;
+}
+.rank {
+	width: 120px;	
+}

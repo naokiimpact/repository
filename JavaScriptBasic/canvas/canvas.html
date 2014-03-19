@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvas</title>
+<style type="text/css">
+body {
+	background-color: gray;
+}
+div {
+	width: 700px;
+	weight: 600px;
+}
+canvas {
+	background-color: white;
+	border: 1px solid black;
+}
+input {
+	width: 40px;
+	padding-left: 5px;
+	disabled: disabled;
+}
+
+select {
+}
+</style>
+<script type="text/javascript">
+window.onload = function() {
+	var div = document.getElementById('back');
+	div.setAttribute("disabled", "disabled");
+	var canvas = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+	var color;
+	var width;
+	var eraser;
+	var pressed;
+	var prevX;
+	var prevY;
+	
+	createSelection();
+	var colorSelect = document.getElementById('color_select');
+	colorSelect.addEventListener("change", color);
+	
+	var widthSelect = document.getElementById('width_select');
+	widthSelect.addEventListener("change", width);
+	
+	var eraserSelect = document.getElementById('eraser_select');
+	eraserSelect.addEventListener("change", eraser);
+	
+	canvas.addEventListener("mousedown", function(e) {
+		pressed = true;
+	});
+	canvas.addEventListener("mouseup", function(e) {
+		pressed = false;
+	});
+	canvas.addEventListener("mousemove", function(e) {
+		var x = (e.clientX - this.offsetLeft); 
+		var y = (e.clientY - this.offsetTop);
+		
+		document.getElementById("pos_x").value = x;
+		document.getElementById("pos_y").value = y;
+		
+		if(pressed){
+			context.beginPath();
+			context.moveTo(prevX, prevY);
+			context.lineTo(x, y);
+			context.stroke();
+		}
+		prevX = x;
+		prevY = y;
+	});
+	
+	function color() {
+		color = document.getElementById('color_select').value;
+		context.strokeStyle = color;
+	}
+	
+	function width() {
+		width = document.getElementById('width_select').value;
+		context.lineWidth = width;
+	}
+	
+	function eraser() {
+		eraser = document.getElementById('eraser_select').value;
+		if (eraser=="off"){
+			context.strokeStyle = color;
+			context.lineWidth = width;
+			if(color==undefined) {
+				context.strokeStyle = "white";
+			}
+			if(width==undefined) {
+				context.lineWidth = 1;
+			}
+		} else {
+			context.strokeStyle = "white";
+			context.lineWidth = eraser;
+		}
+	}
+	
+	function createSelection() {
+		var selectionWidth = "";
+		var selectionEraser_ = "<option value='off'>eraser off</option>";
+		var selectionEraser = "";
+		for(var i = 1 ; i <= 10 ;i++){
+			//
+			selectionWidth += "<option value=" + i + ">" + i + "</option>";
+		}
+		for(var i = 1 ; i <= 30 ;i++){
+			//
+			i = i+2;
+			selectionEraser += "<option value=" + i + ">" + i + "</option>";
+		}
+		document.getElementById("width_select").innerHTML =	selectionWidth;
+		document.getElementById("eraser_select").innerHTML = selectionEraser_ + selectionEraser;
+	}
+}
+</script>
+</head>
+<body>
+	<div id="back">
+	<canvas id="myCanvas" width="500" height="500"></canvas>
+	<br><br>
+	x : <input type="text" id="pos_x" />
+	y : <input type="text" id="pos_y" />
+	<select id="color_select">
+		<option value="black">black</option>		
+		<option value="red">red</option>		
+		<option value="blue">blue</option>		
+		<option value="orange">orange</option>		
+		<option value="green">green</option>		
+		<option value="yellow">yellow</option>		
+	</select>
+	<select id="width_select"></select>
+	<select id="eraser_select"></select>
+	</div>
+</body>
+</html>

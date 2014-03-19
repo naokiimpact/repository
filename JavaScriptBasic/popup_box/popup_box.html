@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Popup Box</title>
+<script type="text/javascript">
+
+window.onload = function init() {
+	
+	var btnConfirm = document.getElementById("confirm");
+	btnConfirm.addEventListener("click", showConfirm);
+	var btnPrompt = document.getElementById("prompt");
+	btnPrompt.addEventListener("click", showPrompt);
+}
+
+function showConfirm() {
+	var ok = confirm("계속 진행하시겠나요?");
+	if (ok == true) {
+		alert("진행하세요.");
+	} else {
+		alert("그만둡니다.");
+	}
+}
+
+function showPrompt() {
+	var name = prompt("당신의 이름은 무엇인가요?");
+	alert(name + " 님 안녕하세요.");
+}
+
+</script>
+</head>
+<body>
+	<button id="confirm">확인창</button>
+	<button id="prompt">입력창</button>
+</body>
+</html>

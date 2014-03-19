@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mouse move Event</title>
+<script type="text/javascript">
+
+document.addEventListener("mousemove", function(e) {
+	document.getElementById("pos_x").value = e.clientX;
+	document.getElementById("pos_y").value = e.clientY;
+});
+
+document.addEventListener("mousedown", function(e) {
+	document.getElementById("mouseDownText").style.display = null;
+});
+document.addEventListener("mouseup", function(e) {
+	document.getElementById("mouseDownText").style.display = "none";
+});
+
+</script>
+
+</head>
+<body>
+
+x : <input type="text" id="pos_x" />
+y : <input type="text" id="pos_y" />
+<span id="mouseDownText" style="display:none">마우스 눌렸다</span>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>popup</title>
+<script type="text/javascript">
+
+window.onload = function init() {
+	
+	var btnOpen = document.getElementById("open");
+	btnOpen.addEventListener("click", winOpen);
+}
+
+function winOpen() {
+	window.open("pop.html", "pop", "width=300, height=200, toolbar=no")
+}
+
+</script>
+
+</head>
+<body>
+	<button id="open">open</button>
+</body>
+</html>
