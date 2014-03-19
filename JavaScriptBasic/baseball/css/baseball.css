@@ -1,7 +1,16 @@
 @CHARSET "UTF-8";
+html {
+	overflow: hidden;
+}
 body {
 	width: 100%;
 	padding: 0;
+	margin: 0;
+}
+div.all {
+	border: 0px;
+	width: 600px;
+	height: 390px;
 }
 div.top { 
 	height: 70px;
@@ -62,7 +71,7 @@ div#input {
 input#inning_num {
 	border: 0px;
 	background-color: transparent;
-	color: black;
+	color: #ABADAB;
 	width: 30px;
 	margin-left: 20px;
 	font-size: 25px;
@@ -77,11 +86,12 @@ input.input {
 	float: right;
 	font-size: 25px;
 	font-family: 굴림;
+	font-weight: bold;
 	text-align: center;
 	background-color: transparent;
-	color: silver;
+	color: #ABADAB;
 	border: 0;
-	border-bottom: 1px solid #A89D90;
+	border-bottom: 2px solid #A89D90;
 }
 input#clock{
 	background-color: transparent;
@@ -90,7 +100,7 @@ input#clock{
 	float: right;
 	padding: 2px;
    	border-radius: 5px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
 	}
 button#clear {
 	margin-top: 10px;
@@ -101,7 +111,7 @@ button#clear {
 	height: 25px;
 	float: right;
    	border-radius: 5px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
 }
 button.input_btn {
 	margin-left: 10px;
@@ -110,9 +120,11 @@ button.input_btn {
 	float: left;
 	font-size: 25px;
 	font-family: 굴림;
+	font-weight: bold;
    	border-radius: 20px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
    	background-color: #ffffff;
+   	color: #777777;
 }
 button#stop {
 	margin-top: 5px;
@@ -123,7 +135,7 @@ button#stop {
 	height: 25px;
 	float: right;
    	border-radius: 5px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
 }
 button#restart {
 	margin-top: 5px;
@@ -134,7 +146,7 @@ button#restart {
 	height: 25px;
 	float: right;
    	border-radius: 5px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
 }
 button#start {
 	margin-top: 5px;
@@ -145,7 +157,7 @@ button#start {
 	height: 25px;
 	float: right;
    	border-radius: 5px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
 }
 button#cheat {
 	margin-top: 5px;
@@ -156,7 +168,7 @@ button#cheat {
 	float: right;
 	opacity: 0.05;
    	border-radius: 5px;
-   	border: 1px solid #A89D90;
+   	border: 2px solid #A89D90;
 }
 textarea#result {
 	background-color: transparent;
@@ -164,5 +176,5 @@ textarea#result {
 	margin-left: 35px;
 	border-radius: 5px;
 	resize: none;
-	border: 1px solid #A89D90;
+	border: 2px solid #A89D90;
 }
