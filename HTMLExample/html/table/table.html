@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	body {
+		font-family: 굴림체, sans-serif; /* 가장 앞에 있는 것부터 순서대로 현재 시스템에 설치된 폰트가 있을 경우 사용하게 됨 */
+		color: #4C4C4C;
+	}
+	div#schedule {
+		z-index: 2;	/* 음수로 지정!? */
+	}
+	table {
+		margin-top: 100px;
+		width: 800px;
+		border-collapse: collapse;
+		border-right: 1px solid #222;
+		border-bottom: 1px solid #222;
+		border-color: #0054FF;
+	}
+	td, th { 
+		padding: 0;
+		border-top: 1px solid #222;
+		border-left: 1px solid #222;
+		width: 130px;
+		height:	70px;
+		text-align: center;
+	}
+	td {
+		background-color: #B2CCFF;
+		border-color: #0054FF;
+		color: #05ff66;
+	}
+	td:hover {
+		background-color: #3163C9;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	td[rowspan="2"] {
+		color: #ff6605;
+	}
+	td[rowspan="3"] {
+		color: #6605ff;
+	}
+	td.isData {
+		background-color: #E6FFFF;
+	}
+	th {
+		background-color: #6799FF;
+		border-color: #0054FF;
+	}
+	caption {
+		padding-bottom: .4em;
+		color: #777;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+	div#menu {
+		z-index: 1;
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		border-bottom: 1px solid orange;
+		opacity: 0.7;
+		background-color: #FAED7D;
+		
+		/* background: none rgba(150, 150, 150, 0.3); */
+		/* filter: alpha(opacity=50, finishopacity=50;); for IE*/
+	}
+	li {
+		margin-top: 30px;
+		list-style-type: none;	
+	}
+	li.menu {
+		position: relative;
+		right: 40px;
+		float: right;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	img {
+		/* border: 2px solid orange; */
+		
+	}
+	img:hover {
+		outline-style: solid;
+		outline-color: orange;
+	}
+	li.title {
+		position: relative;
+		top: -10px;
+		left: 30px;
+		float: left;
+		font-size: 40px;
+	}
+</style>
+</head>
+<body>
+	<div id="schedule">
+		<table>
+			<caption>1학년 1학기 시간표</caption>
+			<thead>
+				<tr>
+					<th></th>	
+					<th>월</th>
+					<th>화</th>
+					<th>수</th>
+					<th>목</th>
+					<th>금</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr> 
+					<th>1</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="3" class="isData">중국 중세사<br><5204></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>3</th>
+					<td></td>
+					<td></td>
+					<td rowspan="2" class="isData">발칸 유럽<br>사회와 문화<br><4401></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>4</th>
+					<td rowspan="3" class="isData">한국 근대사<br><5204></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>5</th>
+					<td></td>
+					<td></td>
+					<td class="isData">볼링<br><2103></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>6</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>7</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>8</th>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="title">시간표</li>
+			<li class="menu"><a href=""><img src="./image/1.png"></a></li>
+			<li class="menu"><a href=""><img src="./image/2.png"></a></li>
+			<li class="menu"><a href=""><img src="./image/3.png"></a></ul>
+			<li class="menu"><a href=""><img src="./image/4.png"></a></li>
+		</ul>
+	</div>
+</body>
+</html>

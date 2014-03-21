@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+	body {
+		font-family: 굴림체, sans-serif; /* 가장 앞에 있는 것부터 순서대로 현재 시스템에 설치된 폰트가 있을 경우 사용하게 됨 */
+		color: #4C4C4C;
+	}
+	div#schedule {
+		z-index: 2;	/* 음수로 지정!? */
+	}
+	table {
+		margin-top: 100px;
+		width: 800px;
+		border-collapse: collapse;
+		border-right: 1px solid #222;
+		border-bottom: 1px solid #222;
+		border-color: #0054FF;
+	}
+	td, th { 
+		padding: 0;
+		border-top: 1px solid #222;
+		border-left: 1px solid #222;
+		width: 130px;
+		height:	70px;
+		text-align: center;
+	}
+	td {
+		background-color: #B2CCFF;
+		border-color: #0054FF;
+		color: #05ff66;
+	}
+	td:hover {
+		background-color: #3163C9;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	td[rowspan="2"] {
+		color: #ff6605;
+	}
+	td[rowspan="3"] {
+		color: #6605ff;
+	}
+	td.isData {
+		background-color: #E6FFFF;
+	}
+	th {
+		background-color: #6799FF;
+		border-color: #0054FF;
+	}
+	caption {
+		padding-bottom: .4em;
+		color: #777;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+	div#menu {
+		z-index: -10;
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		border-bottom: 1px solid orange;
+		opacity: 0.7;
+		background-color: #44b316;
+		
+		/* background: none rgba(150, 150, 150, 0.3); */
+		/* filter: alpha(opacity=50, finishopacity=50;); for IE*/
+	}
+	div#background {
+		z-index: -11;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: #FAF4C0;
+	}
+	li {
+		margin-top: 38px;
+		list-style-type: none;	
+		position: relative;
+		right: 40px;
+		float: right;
+	}
+	li.mail a {
+		width: 30px;
+		display: block;
+		font-size: 1px;
+	}
+	li.cafe a {
+		width: 35px;
+		display: block;
+		font-size: 1px;
+	}
+	li.blog a {
+		width: 35px;
+		display: block;
+		font-size: 1px;
+	}
+	li.kin a {
+		width: 45px;
+		display: block;
+		font-size: 1px;
+	}
+	li.shopping a {
+		width: 35px;
+		display: block;
+		font-size: 1px;
+		margin-left: 0px;
+	}
+	li:hover {
+		/* outline-style: solid;
+		outline-color: orange; */
+		outline: 2px solid orange;
+	}
+	li span {
+		visibility: hidden;
+	}
+	img {
+		position: absolute;
+		right: 40px;
+		float: right;
+		margin-top: 30px;
+		margin-left: 5px;
+		margin-right: 5px;
+		/* border: 2px solid orange; */
+		
+	}
+/* 	img:hover {
+		outline-style: solid;
+		outline-color: orange;
+	} */
+	li.title {
+		position: relative;
+		top: -10px;
+		left: 30px;
+		float: left;
+		font-size: 40px;
+	}
